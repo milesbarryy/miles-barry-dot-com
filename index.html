@@ -5,8 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Miles Barry</title>
 <meta name="description" content="Miles Barry is an undergraduate at UC Davis studying Applied Statistics and Science &amp; Technology Studies.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23E4E9EC'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23FAF7F2'/%3E%3C/svg%3E">
 <style>
+  :root{
+    --ink:#000;
+    --red:#8A1E1E;
+  }
+
   *{box-sizing:border-box}
 
   html{-webkit-text-size-adjust:100%}
@@ -15,38 +20,51 @@
     margin:0;
     min-height:100vh;
     padding:132px 6vw 180px;
-    background-color:#E4E9EC;
+    background-color:#FAF7F2;
     background-image:
-      radial-gradient(85% 65% at 12% -5%, rgba(255,255,255,.62), rgba(255,255,255,0) 62%),
-      radial-gradient(75% 75% at 102% 104%, rgba(255,255,255,.55), rgba(255,255,255,0) 58%);
+      radial-gradient(85% 65% at 12% -5%, rgba(255,253,249,.85), rgba(255,253,249,0) 62%),
+      radial-gradient(75% 75% at 102% 104%, rgba(255,252,246,.75), rgba(255,252,246,0) 58%);
     background-attachment:fixed;
-    color:#000;
+    color:var(--ink);
     font-family:"Helvetica Neue",Helvetica,Arial,-apple-system,BlinkMacSystemFont,sans-serif;
     font-size:18px;
     line-height:1.5;
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
   }
 
   main{max-width:1180px}
 
   p{margin:0 0 1.5em}
 
-  .contact{margin-top:4.5em}
-  .contact p:last-child{margin-bottom:0}
-
   a{
     color:inherit;
     text-decoration:underline;
     text-decoration-thickness:1px;
     text-underline-offset:3px;
-    text-decoration-color:rgba(0,0,0,.32);
-    transition:text-decoration-color .15s ease;
+    text-decoration-color:rgba(138,30,30,.5);
+    transition:text-decoration-color .15s ease,color .15s ease;
   }
-  a:hover{text-decoration-color:#000}
-  a:focus-visible{outline:2px solid #000;outline-offset:3px}
+  a:hover{text-decoration-color:var(--red);color:var(--red)}
+  a:focus-visible{outline:2px solid var(--red);outline-offset:3px}
 
   cite{font-style:italic}
+
+  .contact{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin:4.5em 0 0;
+  }
+  .contact a{
+    display:inline-flex;
+    text-decoration:none;
+    color:var(--ink);
+    transition:color .15s ease;
+  }
+  .contact a:hover{color:var(--red)}
+  .contact svg{display:block;fill:currentColor}
+  /* optically matched: the envelope glyph sits shorter in its box than the LinkedIn mark */
+  .contact .i-mail svg{width:23px;height:23px}
+  .contact .i-li svg{width:19px;height:19px}
 
   @media (max-width:700px){
     body{padding:72px 24px 110px;font-size:17px}
@@ -63,52 +81,61 @@
     <a href="https://www.fudan.edu.cn/en/">Fudan University</a> in Shanghai.</p>
 
   <p>I&rsquo;m working on <a href="https://cosine-test.fly.dev/">Cosine</a>, a platform allowing
-    people to discover, and bet on undiscovered musicians.</p>
+    people to discover, and trade on undiscovered musicians using a modified Parimutuel system.</p>
 
   <p>I&rsquo;m the associate director of ASUCD&rsquo;s <a href="https://irl.ucdavis.edu/">Innovation
-    and Research Lab (IRL)</a>, where I&rsquo;ve led projects including the AI Use Survey Study and
-    the UC Davis 2025 basic needs report.</p>
+    and Research Lab (IRL)</a>, where I&rsquo;ve led projects including the
+    <a href="https://docs.google.com/document/d/1V-PsTl85ShbifZTQqA7riZIbvzaYNhZKiEWGHkvrfqU/edit?tab=t.0">2026
+    AI Usage Report</a> and the
+    <a href="https://docs.google.com/document/d/1g0U79xuNB-XrsJPOhzuYF52rbfKNHjcmIjfe2LX4WY8/edit?tab=t.0">2025
+    Undergraduate Basic Needs Report</a>.</p>
 
   <p>From June through September 2026, I interned at my hometown paper
-    <cite><a href="https://www.ptreyeslight.com/">The Point Reyes Light</a></cite>. I wrote pieces
-    like &ldquo;<a href="https://www.ptreyeslight.com/news/another-bad-year-for-seal-pups/">Another
-    bad year for seal pups</a>,&rdquo;
-    &ldquo;<a href="https://www.ptreyeslight.com/news/creek-swimming-holes-get-poor-marks-for-cleanliness/">Creek
-    swimming holes get poor marks for cleanliness</a>,&rdquo;
-    &ldquo;<a href="https://www.ptreyeslight.com/news/on-july-4-in-woodacre-a-valley-reunites/">On
-    July 4 in Woodacre, a valley reunites</a>,&rdquo; and
-    &ldquo;<a href="https://www.ptreyeslight.com/news/church-discussion-asks-when-is-war-just/">Church
-    discussion asks, When is war just?</a>&rdquo;</p>
+    <cite><a href="https://www.ptreyeslight.com/">The Point Reyes Light</a></cite>, covering rural
+    West Marin. I wrote about the
+    <a href="https://www.ptreyeslight.com/news/another-bad-year-for-seal-pups/">harbor seal pupping
+    season</a>, fire blight, and tenancy-in-common agreements.</p>
 
-  <p>In Davis&rsquo;s STS department, I&rsquo;m a research assistant to
+  <p>In the STS department, I&rsquo;m a research assistant to
     <a href="https://sts.ucdavis.edu/people/jens-pohlmann">Dr. Jens Pohlmann</a>. We were awarded a
     <a href="https://freespeechcenter.universityofcalifornia.edu/programs-and-resources/voice-initiative/">2027
-    UC VOICE</a> grant to continue analysing student views on campus &amp; platform speech.
-    <a href="https://finnbrunton.net/">Dr. Finn Brunton</a> is supervising my senior thesis on
-    prediction markets.</p>
+    UC VOICE</a> grant to continue our work on campus &amp; platform speech.
+    <a href="https://finnbrunton.net/">Dr. Finn Brunton</a> is supervising my forthcoming senior
+    thesis on prediction markets.</p>
 
-  <p>I used to write opinion columns for The California Aggie. My favorite pieces are about
+  <p>I used to write opinion columns for <cite><a href="https://theaggie.org/">The California
+    Aggie</a></cite>. My favorite pieces are about
     <a href="https://theaggie.org/2026/01/10/kalshi-is-a-sports-betting-company-even-if-the-commodity-futures-trading-commission-wont-call-it-that">prediction
     market regulation</a>, <a href="https://theaggie.org/2026/4/11/americans-are-playing-the-us-israel-iran-war">the
     gamification of U.S. military operations</a>,
     <a href="https://theaggie.org/2025/11/14/forum-to-table-how-seed-oil-paranoia-can-radicalize">seed
-    oils</a>, and <a href="https://theaggie.org/2026/1/19/why-are-american-t-shirts-so-antisocial">T-shirts</a>.</p>
+    oils</a>, and <a href="https://theaggie.org/2026/1/19/why-are-american-t-shirts-so-antisocial">t-shirts</a>.</p>
 
   <p>From Jan. 2024 to January 2026, I led video production at the
-    <a href="https://www.linkedin.com/company/ucdssc/posts/?feedView=all">Student Startup Center</a>,
-    where I directed and edited shorts about our programs, including
-    <a href="https://drive.google.com/drive/folders/12OrquSoGRvcQn2sULoADtkyvesyeM3Wy">Innovation for
-    Impact</a>, <a href="https://drive.google.com/drive/folders/12OrquSoGRvcQn2sULoADtkyvesyeM3Wy">Startup
-    School</a>, and <a href="https://drive.google.com/drive/folders/12OrquSoGRvcQn2sULoADtkyvesyeM3Wy">Build
-    Black</a>. I also interviewed founders during our speaker series, taught workshops on video
-    production and Figma, and provided creative support to student founders.</p>
+    <a href="https://www.linkedin.com/company/ucdssc/posts/?feedView=all">Student Startup Center</a>.
+    I directed and edited shorts about our programs, including
+    <a href="https://drive.google.com/file/d/1lomgjiUmuC4cbqf8VCGZ-wIVMLiCy1Qp/view?usp=sharing">Startup
+    School</a>, <a href="https://drive.google.com/file/d/1OKnCejDPAdLoXO7PvDPXOtQYJxl__LJk/view?usp=sharing">Build
+    Black</a>, and
+    <a href="https://drive.google.com/file/d/1M_GvXngdR0iygESQRWenlPanYiqCDm7E/view?usp=sharing">Innovation
+    for Impact</a>.</p>
 
-  <p>During my gap year, I interned at the Bronx Defenders.</p>
+  <p>During my gap year, I interned at <a href="https://www.bronxdefenders.org/">The Bronx Defenders</a>.</p>
 
-  <div class="contact">
-    <p><a href="https://www.linkedin.com/in/milesbarryy/">linkedin.com/in/milesbarryy</a></p>
-    <p><a href="mailto:mabarry@ucdavis.edu">mabarry@ucdavis.edu</a></p>
-  </div>
+  <p class="contact">
+    <span>contact:</span>
+    <a class="i-mail" href="mailto:mabarry@ucdavis.edu" aria-label="Email Miles Barry" title="mabarry@ucdavis.edu">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M3 4h18a1 1 0 0 1 1 1v.42l-9.47 5.92a1 1 0 0 1-1.06 0L2 5.42V5a1 1 0 0 1 1-1Z"/>
+        <path d="M22 7.78V19a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.78l8.94 5.59a2 2 0 0 0 2.12 0L22 7.78Z"/>
+      </svg>
+    </a>
+    <a class="i-li" href="https://www.linkedin.com/in/milesbarryy/" aria-label="Miles Barry on LinkedIn" title="LinkedIn">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286ZM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125Zm1.782 13.019H3.555V9h3.564v11.452ZM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003Z"/>
+      </svg>
+    </a>
+  </p>
 
 </main>
 </body>
