@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Creek swimming holes get poor marks for cleanliness — Miles Barry</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23FAF7F2'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#000; --red:#8A1E1E; --paper:#FAF7F2;
+    --entero:#8A1E1E; --fecal:#1F5C73; --total:#B8862F;
+    --grid:rgba(0,0,0,.10); --muted:rgba(0,0,0,.55);
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; min-height:100vh; padding:56px 6vw 72px;
+    background-color:var(--paper);
+    background-image:
+      radial-gradient(85% 65% at 12% -5%, rgba(255,253,249,.85), rgba(255,253,249,0) 62%),
+      radial-gradient(75% 75% at 102% 104%, rgba(255,252,246,.75), rgba(255,252,246,0) 58%);
+    background-attachment:fixed;
+    color:var(--ink);
+    font-family:"Helvetica Neue",Helvetica,Arial,-apple-system,BlinkMacSystemFont,sans-serif;
+    font-size:18px; line-height:1.5;
+  }
+  main{max-width:760px;margin:0 auto}
+  a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;
+    text-decoration-color:rgba(138,30,30,.5);transition:text-decoration-color .15s ease,color .15s ease}
+  a:hover{text-decoration-color:var(--red);color:var(--red)}
+  em{font-style:italic}
+
+  .home{display:inline-flex;align-items:center;gap:7px;font-size:14px;text-decoration:none;
+        color:var(--muted);margin:0 0 30px;letter-spacing:.01em}
+  .home:hover{color:var(--red)}
+  .home .arrow{font-size:16px;line-height:1}
+
+  h1{font-size:34px;line-height:1.12;letter-spacing:-.01em;margin:0 0 14px;font-weight:700}
+  .standfirst{font-size:20px;line-height:1.45;color:#222;margin:0 0 10px}
+  .byline{font-size:14px;color:var(--muted);margin:0 0 34px;letter-spacing:.02em}
+  p{margin:0 0 1.28em}
+
+  figure{margin:0 0 40px}
+  .chart-card{
+    border:1px solid rgba(0,0,0,.14); background:rgba(255,255,255,.55);
+    border-radius:4px; padding:20px 20px 16px; box-shadow:0 1px 0 rgba(0,0,0,.03);
+  }
+  .chart-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:2px}
+  .chart-title{font-size:19px;font-weight:700;margin:0}
+  .chart-sub{font-size:13px;color:var(--muted);margin:2px 0 0}
+  .site-tabs{display:flex;gap:6px;flex-wrap:wrap}
+  .site-tabs button{
+    font:inherit;font-size:13.5px;cursor:pointer;padding:5px 12px;border-radius:999px;
+    border:1px solid rgba(0,0,0,.18);background:transparent;color:var(--muted);transition:all .15s ease;
+  }
+  .site-tabs button:hover{border-color:var(--red);color:var(--red)}
+  .site-tabs button[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+
+  .legend{display:flex;gap:18px;flex-wrap:wrap;margin:14px 0 4px}
+  .legend .item{display:flex;align-items:center;gap:8px;font-size:13.5px}
+  .legend .swatch{width:22px;height:3px;border-radius:2px;display:inline-block}
+  .legend .val{font-variant-numeric:tabular-nums;font-weight:700;color:var(--ink)}
+  .legend .name{color:var(--muted)}
+
+  .plot-wrap{position:relative;width:100%}
+  svg.plot{display:block;width:100%;height:auto;overflow:visible;touch-action:none}
+  .readout-date{font-size:12.5px;color:var(--muted);margin:10px 2px 0;font-variant-numeric:tabular-nums;min-height:1.2em}
+  .axis text{fill:var(--muted);font-size:11px;font-family:inherit}
+  .grid line{stroke:var(--grid);stroke-width:1}
+  .series-line{fill:none;stroke-width:2.25;stroke-linejoin:round;stroke-linecap:round}
+  .scrub{stroke:rgba(0,0,0,.4);stroke-width:1;stroke-dasharray:3 3}
+  .dot{stroke:var(--paper);stroke-width:1.5}
+  .thresh{stroke-width:1.3;opacity:.7}
+
+  /* threshold key */
+  .thresh-key{border-top:1px solid rgba(0,0,0,.10);margin-top:16px;padding-top:13px}
+  .thresh-key .tk-title{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 9px}
+  .thresh-key .tk-items{display:flex;flex-wrap:wrap;gap:14px 22px}
+  .thresh-key .tk-item{display:flex;align-items:center;gap:9px;font-size:13px;color:#333}
+  .thresh-key svg{display:block;flex:none}
+  .thresh-key b{font-variant-numeric:tabular-nums}
+
+  figcaption{font-size:12.5px;color:var(--muted);line-height:1.45;margin-top:14px}
+  .disclaimer{font-size:12.5px;color:var(--muted);line-height:1.5;margin-top:14px;
+    border-left:2px solid rgba(138,30,30,.35);padding:2px 0 2px 12px}
+
+  @media (max-width:700px){
+    body{padding:44px 22px 64px;font-size:17px}
+    h1{font-size:27px}
+    .standfirst{font-size:18px}
+    .chart-head{flex-direction:column;gap:10px}
+    .legend{gap:12px}
+    .thresh-key .tk-items{gap:12px 18px}
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <a class="home" href="/"><span class="arrow">&larr;</span> Back to home</a>
+
+  <h1>Creek swimming holes get poor marks for cleanliness</h1>
+  <p class="standfirst">West Marin's ocean beaches all earned top water-quality marks this year. Three beloved swimming holes on Lagunitas Creek did not &mdash; and the bacteria data behind those grades shows they didn't fail the same way.</p>
+  <p class="byline">By Miles Barry</p>
+
+  <figure>
+    <div class="chart-card">
+      <div class="chart-head">
+        <div>
+          <p class="chart-title" id="siteName">The Inkwells</p>
+          <p class="chart-sub">Bacteria concentration by sample date, April&ndash;October 2025</p>
+        </div>
+        <div class="site-tabs" role="tablist" id="tabs"></div>
+      </div>
+
+      <div class="legend" id="legend"></div>
+
+      <div class="plot-wrap" id="plotWrap"></div>
+      <p class="readout-date" id="readoutDate">Hover the chart to read values by date</p>
+
+      <div class="thresh-key">
+        <p class="tk-title">Dashed lines: single-sample safety standards</p>
+        <div class="tk-items">
+          <div class="tk-item">
+            <svg width="34" height="8"><line x1="0" y1="4" x2="34" y2="4" stroke="#8A1E1E" stroke-width="1.6" stroke-dasharray="1 4"/></svg>
+            <span>Enterococcus &mdash; <b>104</b></span>
+          </div>
+          <div class="tk-item">
+            <svg width="34" height="8"><line x1="0" y1="4" x2="34" y2="4" stroke="#1F5C73" stroke-width="1.6" stroke-dasharray="7 4"/></svg>
+            <span>Fecal coliform / <em>E. coli</em> &mdash; <b>400</b></span>
+          </div>
+          <div class="tk-item">
+            <svg width="34" height="8"><line x1="0" y1="4" x2="34" y2="4" stroke="#B8862F" stroke-width="1.6" stroke-dasharray="10 3 2 3"/></svg>
+            <span>Total coliform &mdash; <b>10,000</b></span>
+          </div>
+        </div>
+        <p style="font-size:12.5px;color:var(--muted);margin:11px 0 0">A reading above its standard is flagged &#9873; in the values above. Bacteria are measured in most-probable-number counts per 100&nbsp;mL, shown on a logarithmic scale.</p>
+      </div>
+
+      <figcaption>
+        Source: California State Water Resources Control Board (CEDEN / BeachWatch), Marin County monitoring.
+      </figcaption>
+
+      <p class="disclaimer">This interactive graphic was produced by Miles Barry and was not published by The Point Reyes Light. The accompanying article appeared in The Point Reyes Light.</p>
+    </div>
+  </figure>
+
+  <p>All West Marin beaches received top marks for water quality in a new report, but a few swimming holes on Lagunitas Creek were not so lucky. Heal The Bay, a Santa Monica environmental advocacy group, releases a beach report card, and three popular spots&mdash;at the Inkwells, White House Pool and the Green Bridge&mdash;received F and D grades this year, based on average levels of fecal bacteria.</p>
+
+<p>The sites didn&rsquo;t fail for the same reason. At the Inkwells, near Samuel P. Taylor State Park, enterococcus is the culprit, spiking above safety standards four times in 2025. Near the Green Bridge, the problem is total coliform, which ran high from late July into September. At White House Pool, a wide section of the creek surrounded by marshland, enterococcus stayed low through early summer before spiking seven times between August and October.</p>
+
+<p>These bacteria don&rsquo;t necessarily make you sick on their own, but scientists use them as indicators that fecal matter and its more dangerous pathogens have reached the water. Federal studies dating to the 1980s found that enterococcus and <em>E. coli</em> track closely with the risk of gastrointestinal illness in freshwater, while total and fecal coliform are weaker signals.</p>
+
+<p>The spots aren&rsquo;t contaminated year-round. The data driving the report comes from Marin County&rsquo;s Environmental Health Services, which collects weekly samples between April and October to monitor swimming sites for total coliform, <em>E. coli</em>, and enterococcus. Total coliform refers to a broad group of environmental bacteria commonly found in soil and water. <em>E. coli</em> is a specific type of coliform found in the digestive tract of warm-blooded animals. Enterococcus is a hardy, salt-tolerant bacteria that regulators consider an especially reliable signal of fecal contamination. These bacteria appear more frequently in the winter, when rain washes it from failing septic systems.</p>
+
+<p>Mark Dowie, an Inverness Park resident who swims at White House Pool all year long, doesn&rsquo;t swim blind. &ldquo;On Wednesday of every week that I swim&mdash;and that&rsquo;s almost every week&mdash;I check through the county report,&rdquo; he said. When it says to avoid the White House Pool, he swims elsewhere. Mr.&nbsp;Dowie said the creek, whose water level ebbs and flows with the tide, is a perfect spot to swim alone: shallow enough to stand up and never unbearably cold.</p>
+
+<p>His approach emphasizes that although a letter grade can provide a rule of thumb, it can&rsquo;t accurately describe water that changes day to day. &ldquo;The problem with grading it for the whole year is that people are going to make a decision about swimming all year based on that grade,&rdquo; he said. &ldquo;For a lot of weeks, it&rsquo;s an A, and for a lot of weeks it&rsquo;s a D-minus.&rdquo;</p>
+
+<p>Tanner Lewis, a student at Archie Williams, started swimming the Inkwells as soon as he could ride a bike there with friends. He stops at the store for a meal, then walks 10 to 15 minutes to the pools. He monitors signage for warnings, but he&rsquo;s under no illusions about the water. &ldquo;Everyone who goes knows the water is not the cleanest,&rdquo; he said. &ldquo;You don&rsquo;t wanna get any in open wounds or in your mouth or nose.&rdquo;</p>
+
+</main>
+
+<script>
+const DATA = {"The Inkwells":[{"date":"2025-04-10","entero":52.0,"fecal":62.0,"total":1137.0,"wet":false},{"date":"2025-04-16","entero":63.0,"fecal":75.0,"total":1529.0,"wet":false},{"date":"2025-05-01","entero":414.0,"fecal":75.0,"total":1376.0,"wet":false},{"date":"2025-05-09","entero":10.0,"fecal":97.0,"total":1785.0,"wet":false},{"date":"2025-05-16","entero":52.0,"fecal":122.0,"total":1565.0,"wet":false},{"date":"2025-05-21","entero":63.0,"fecal":98.0,"total":2282.0,"wet":false},{"date":"2025-05-30","entero":74.0,"fecal":243.0,"total":1483.0,"wet":false},{"date":"2025-06-05","entero":52.0,"fecal":121.0,"total":1439.0,"wet":false},{"date":"2025-06-13","entero":52.0,"fecal":110.0,"total":988.0,"wet":false},{"date":"2025-06-20","entero":41.0,"fecal":86.0,"total":909.0,"wet":false},{"date":"2025-06-25","entero":20.0,"fecal":31.0,"total":1236.0,"wet":false},{"date":"2025-07-03","entero":20.0,"fecal":98.0,"total":1401.0,"wet":false},{"date":"2025-07-11","entero":20.0,"fecal":31.0,"total":1354.0,"wet":false},{"date":"2025-07-17","entero":20.0,"fecal":134.0,"total":2224.0,"wet":false},{"date":"2025-07-25","entero":341.0,"fecal":10.0,"total":1169.0,"wet":false},{"date":"2025-07-30","entero":41.0,"fecal":31.0,"total":5794.0,"wet":false},{"date":"2025-08-08","entero":171.0,"fecal":74.0,"total":1785.0,"wet":false},{"date":"2025-08-15","entero":31.0,"fecal":73.0,"total":24196.0,"wet":false},{"date":"2025-08-22","entero":52.5,"fecal":119.5,"total":9510.0,"wet":false},{"date":"2025-08-27","entero":31.0,"fecal":187.0,"total":14136.0,"wet":false},{"date":"2025-09-05","entero":52.0,"fecal":10.0,"total":3873.0,"wet":false},{"date":"2025-09-11","entero":20.0,"fecal":161.0,"total":3873.0,"wet":true},{"date":"2025-09-19","entero":10.0,"fecal":63.0,"total":1259.0,"wet":false},{"date":"2025-09-26","entero":20.0,"fecal":10.0,"total":1396.0,"wet":true},{"date":"2025-10-03","entero":10.0,"fecal":20.0,"total":1059.0,"wet":true},{"date":"2025-10-09","entero":31.0,"fecal":41.0,"total":1039.0,"wet":false},{"date":"2025-10-17","entero":332.0,"fecal":122.0,"total":3255.0,"wet":true},{"date":"2025-10-22","entero":86.0,"fecal":20.0,"total":987.0,"wet":false},{"date":"2025-10-31","entero":73.0,"fecal":31.0,"total":1467.0,"wet":false}],"White House Pool":[{"date":"2025-04-10","entero":30.0,"fecal":30.0,"total":1497.0,"wet":false},{"date":"2025-04-16","entero":20.0,"fecal":85.0,"total":1529.0,"wet":false},{"date":"2025-05-01","entero":10.0,"fecal":52.0,"total":1576.0,"wet":false},{"date":"2025-05-09","entero":10.0,"fecal":20.0,"total":1071.0,"wet":false},{"date":"2025-05-16","entero":20.0,"fecal":246.0,"total":1968.0,"wet":false},{"date":"2025-05-21","entero":30.0,"fecal":146.0,"total":1223.0,"wet":false},{"date":"2025-05-30","entero":62.0,"fecal":393.0,"total":6131.0,"wet":false},{"date":"2025-06-05","entero":20.0,"fecal":52.0,"total":2400.0,"wet":false},{"date":"2025-06-13","entero":20.0,"fecal":185.0,"total":3968.0,"wet":false},{"date":"2025-06-20","entero":20.0,"fecal":31.0,"total":1354.0,"wet":false},{"date":"2025-06-25","entero":63.0,"fecal":160.0,"total":2489.0,"wet":false},{"date":"2025-07-03","entero":31.0,"fecal":546.0,"total":10462.0,"wet":false},{"date":"2025-07-11","entero":31.0,"fecal":75.0,"total":9208.0,"wet":false},{"date":"2025-07-17","entero":98.0,"fecal":85.0,"total":19863.0,"wet":false},{"date":"2025-07-25","entero":31.0,"fecal":86.0,"total":14136.0,"wet":false},{"date":"2025-07-30","entero":52.0,"fecal":52.0,"total":8664.0,"wet":false},{"date":"2025-08-08","entero":52.0,"fecal":110.0,"total":9208.0,"wet":false},{"date":"2025-08-15","entero":20.0,"fecal":41.0,"total":2187.0,"wet":false},{"date":"2025-08-22","entero":160.0,"fecal":142.0,"total":9971.0,"wet":false},{"date":"2025-08-27","entero":185.0,"fecal":31.0,"total":2613.0,"wet":false},{"date":"2025-09-05","entero":52.0,"fecal":173.0,"total":24196.0,"wet":false},{"date":"2025-09-11","entero":20.0,"fecal":62.0,"total":15531.0,"wet":true},{"date":"2025-09-19","entero":146.0,"fecal":187.0,"total":10462.0,"wet":false},{"date":"2025-09-26","entero":10.0,"fecal":98.0,"total":6131.0,"wet":true},{"date":"2025-10-03","entero":120.0,"fecal":173.0,"total":7270.0,"wet":true},{"date":"2025-10-09","entero":109.0,"fecal":75.0,"total":4352.0,"wet":true},{"date":"2025-10-17","entero":185.0,"fecal":134.0,"total":1631.0,"wet":true},{"date":"2025-10-22","entero":75.0,"fecal":86.0,"total":823.0,"wet":false},{"date":"2025-10-31","entero":173.0,"fecal":173.0,"total":2224.0,"wet":false}],"Green Bridge":[{"date":"2025-04-10","entero":10.0,"fecal":10.0,"total":1650.0,"wet":false},{"date":"2025-04-16","entero":10.0,"fecal":20.0,"total":1139.0,"wet":false},{"date":"2025-05-01","entero":63.0,"fecal":63.0,"total":1782.0,"wet":false},{"date":"2025-05-09","entero":10.0,"fecal":10.0,"total":14136.0,"wet":false},{"date":"2025-05-16","entero":10.0,"fecal":246.0,"total":1223.0,"wet":false},{"date":"2025-05-21","entero":10.0,"fecal":295.0,"total":712.0,"wet":false},{"date":"2025-05-30","entero":31.0,"fecal":211.0,"total":2755.0,"wet":false},{"date":"2025-06-05","entero":10.0,"fecal":132.0,"total":1515.0,"wet":false},{"date":"2025-06-13","entero":36.0,"fecal":256.5,"total":1473.5,"wet":false},{"date":"2025-06-25","entero":62.0,"fecal":318.0,"total":1043.0,"wet":false},{"date":"2025-07-03","entero":41.0,"fecal":85.0,"total":2613.0,"wet":false},{"date":"2025-07-11","entero":10.0,"fecal":75.0,"total":2481.0,"wet":false},{"date":"2025-07-17","entero":20.0,"fecal":97.0,"total":8664.0,"wet":false},{"date":"2025-07-25","entero":52.0,"fecal":25.5,"total":7270.0,"wet":false},{"date":"2025-08-08","entero":20.0,"fecal":63.0,"total":11199.0,"wet":false},{"date":"2025-08-15","entero":41.0,"fecal":63.0,"total":19863.0,"wet":false},{"date":"2025-08-22","entero":25.0,"fecal":75.5,"total":12996.5,"wet":false},{"date":"2025-08-27","entero":30.0,"fecal":120.0,"total":10462.0,"wet":false},{"date":"2025-09-05","entero":41.0,"fecal":145.0,"total":9804.0,"wet":false},{"date":"2025-09-11","entero":85.0,"fecal":933.0,"total":24196.0,"wet":true},{"date":"2025-09-19","entero":41.0,"fecal":75.0,"total":12997.0,"wet":false},{"date":"2025-09-26","entero":10.0,"fecal":73.0,"total":9804.0,"wet":true},{"date":"2025-10-03","entero":52.0,"fecal":134.0,"total":4352.0,"wet":true},{"date":"2025-10-09","entero":20.0,"fecal":52.0,"total":1723.0,"wet":true},{"date":"2025-10-17","entero":185.0,"fecal":75.0,"total":2178.0,"wet":true},{"date":"2025-10-22","entero":86.0,"fecal":63.0,"total":789.0,"wet":false},{"date":"2025-10-31","entero":171.0,"fecal":52.0,"total":1046.0,"wet":false}]};
+const SITES = Object.keys(DATA);
+const SERIES = [
+  {key:'entero', name:'Enterococcus',            raw:'#8A1E1E', thr:104,   dash:'1 4'},
+  {key:'fecal',  name:'Fecal coliform / E. coli',raw:'#1F5C73', thr:400,   dash:'7 4'},
+  {key:'total',  name:'Total coliform',          raw:'#B8862F', thr:10000, dash:'10 3 2 3'},
+];
+let current = SITES[0];
+let hoverIdx = null;
+
+const tabs = document.getElementById('tabs');
+SITES.forEach(s=>{
+  const b=document.createElement('button');
+  b.textContent=s; b.setAttribute('role','tab'); b.setAttribute('aria-selected', s===current);
+  b.onclick=()=>{current=s;hoverIdx=null;render();};
+  tabs.appendChild(b);
+});
+
+const legend=document.getElementById('legend');
+SERIES.forEach(se=>{
+  const it=document.createElement('div'); it.className='item';
+  it.innerHTML=`<span class="swatch" style="background:${se.raw}"></span>`+
+               `<span class="name">${se.name}</span> `+
+               `<span class="val" data-val="${se.key}" style="color:${se.raw}"></span>`;
+  legend.appendChild(it);
+});
+
+const W=680, H=340, M={t:14,r:14,b:34,l:52};
+const iw=W-M.l-M.r, ih=H-M.t-M.b;
+const wrap=document.getElementById('plotWrap');
+
+function fmt(v){ return v>=1000 ? v.toLocaleString('en-US') : String(v); }
+function niceDate(d){ const [,m,day]=d.split('-');
+  const mm=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][+m-1];
+  return `${mm} ${+day}`; }
+
+function render(){
+  [...tabs.children].forEach(b=>b.setAttribute('aria-selected', b.textContent===current));
+  document.getElementById('siteName').textContent=current;
+  const rows=DATA[current], n=rows.length;
+  const t0=new Date(rows[0].date).getTime(), t1=new Date(rows[n-1].date).getTime();
+  const x=t=>M.l + ((new Date(t).getTime()-t0)/(t1-t0))*iw;
+  const allVals=[]; rows.forEach(r=>SERIES.forEach(s=>allVals.push(Math.max(1,r[s.key]))));
+  const ymax=Math.max(10000,...allVals);
+  const y=v=>{const lv=Math.log10(Math.max(1,v)),lmax=Math.log10(ymax); return M.t+ih-(lv/lmax)*ih;};
+
+  let svg=`<svg class="plot" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Bacteria concentration over time for ${current}">`;
+  svg+='<g class="grid">';
+  [1,10,100,1000,10000].forEach(gv=>{ if(gv<=ymax){const yy=y(gv);
+    svg+=`<line x1="${M.l}" x2="${W-M.r}" y1="${yy}" y2="${yy}"></line>`;
+    svg+=`<text class="axis" x="${M.l-8}" y="${yy+3}" text-anchor="end">${fmt(gv)}</text>`;}});
+  svg+='</g><g class="axis">';
+  rows.forEach((r,i)=>{ if(i%4===0) svg+=`<text x="${x(r.date)}" y="${H-12}" text-anchor="middle">${niceDate(r.date)}</text>`; });
+  svg+='</g>';
+  // threshold dashed lines, distinct dash per standard
+  SERIES.forEach(s=>{ if(s.thr<=ymax){const yy=y(s.thr);
+    svg+=`<line class="thresh" x1="${M.l}" x2="${W-M.r}" y1="${yy}" y2="${yy}" stroke="${s.raw}" stroke-dasharray="${s.dash}"></line>`;}});
+  // series
+  SERIES.forEach(s=>{ let d=''; rows.forEach((r,i)=>{d+=(i?'L':'M')+x(r.date)+' '+y(r[s.key]);});
+    svg+=`<path class="series-line" d="${d}" stroke="${s.raw}"></path>`; });
+  if(hoverIdx!==null){ const r=rows[hoverIdx], xx=x(r.date);
+    svg+=`<line class="scrub" x1="${xx}" x2="${xx}" y1="${M.t}" y2="${M.t+ih}"></line>`;
+    SERIES.forEach(s=>{ svg+=`<circle class="dot" cx="${xx}" cy="${y(r[s.key])}" r="4.5" fill="${s.raw}"></circle>`; });
+  }
+  svg+='</svg>';
+  wrap.innerHTML=svg;
+
+  const el=wrap.querySelector('svg');
+  const pick=ev=>{ const box=el.getBoundingClientRect();
+    const px=(ev.touches?ev.touches[0].clientX:ev.clientX)-box.left;
+    const rel=px/box.width*W; let best=0,bd=1e9;
+    rows.forEach((r,i)=>{const dx=Math.abs(x(r.date)-rel); if(dx<bd){bd=dx;best=i;}});
+    hoverIdx=best; render();
+  };
+  el.addEventListener('pointermove',pick);
+  el.addEventListener('pointerdown',pick);
+  el.addEventListener('pointerleave',()=>{hoverIdx=null; render();});
+  updateReadout(rows);
+}
+
+function updateReadout(rows){
+  const dateEl=document.getElementById('readoutDate');
+  if(hoverIdx===null){ dateEl.textContent='Hover the chart to read values by date';
+    SERIES.forEach(s=>document.querySelector(`[data-val="${s.key}"]`).textContent=''); return; }
+  const r=rows[hoverIdx];
+  dateEl.textContent=new Date(r.date).toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'})+(r.wet?'  ·  wet-weather sample':'');
+  SERIES.forEach(s=>{ const v=r[s.key];
+    document.querySelector(`[data-val="${s.key}"]`).textContent=fmt(v)+(v>=s.thr?'  \u2691':''); });
+}
+render();
+</script>
+</body>
+</html>
