@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Selected data-driven work &mdash; Miles Barry</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23FAF7F2'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#000; --red:#8A1E1E; --paper:#FAF7F2;
+    --muted:rgba(0,0,0,.55);
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; min-height:100vh; padding:56px 6vw 72px;
+    background-color:var(--paper);
+    background-image:
+      radial-gradient(85% 65% at 12% -5%, rgba(255,253,249,.85), rgba(255,253,249,0) 62%),
+      radial-gradient(75% 75% at 102% 104%, rgba(255,252,246,.75), rgba(255,252,246,0) 58%);
+    background-attachment:fixed;
+    color:var(--ink);
+    font-family:"Helvetica Neue",Helvetica,Arial,-apple-system,BlinkMacSystemFont,sans-serif;
+    font-size:18px; line-height:1.5;
+  }
+  main{max-width:760px;margin:0 auto}
+  a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;
+    text-decoration-color:rgba(138,30,30,.5);transition:text-decoration-color .15s ease,color .15s ease}
+  a:hover{text-decoration-color:var(--red);color:var(--red)}
+  a:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+  em,cite{font-style:italic}
+
+  .home{display:inline-flex;align-items:center;gap:7px;font-size:14px;text-decoration:none;
+        color:var(--muted);margin:0 0 30px;letter-spacing:.01em}
+  .home:hover{color:var(--red)}
+  .home .arrow{font-size:16px;line-height:1}
+
+  h1{font-size:34px;line-height:1.12;letter-spacing:-.01em;margin:0 0 14px;font-weight:700}
+  .byline{font-size:14px;color:var(--muted);margin:0 0 10px;letter-spacing:.02em}
+  .standfirst{margin:0 0 50px;color:var(--muted);font-size:16px;line-height:1.5}
+  p{margin:0 0 1.28em}
+
+  .clip{margin:0 0 50px}
+  .clip:last-of-type{margin-bottom:0}
+  .num{font-size:12.5px;color:var(--muted);letter-spacing:.14em;margin:0 0 9px}
+  h2{font-size:22px;line-height:1.25;letter-spacing:-.005em;margin:0 0 7px;font-weight:700}
+  .meta{font-size:14px;color:var(--muted);margin:0 0 11px;letter-spacing:.01em}
+  .links{font-size:15px;margin:0 0 15px}
+  .links .sep{color:var(--muted);padding:0 7px}
+  .role{margin:0}
+
+  .foot{margin-top:62px;font-size:15px;color:var(--muted)}
+  .foot a{color:var(--ink)}
+
+  @media (max-width:700px){
+    body{padding:44px 22px 64px;font-size:17px}
+    h1{font-size:27px}
+    h2{font-size:20px}
+    .links .sep{padding:0 5px}
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <a class="home" href="/"><span class="arrow">&larr;</span> Back to home</a>
+
+  <h1>Selected data-driven work</h1>
+  <p class="byline">Miles Barry</p>
+  <p class="standfirst">Three clips, with a note on my role in each. Where I built a graphic that
+    did not run with the published story, both are linked and labeled.</p>
+
+  <article class="clip">
+    <p class="num">01</p>
+    <h2>Another bad year for seal pups</h2>
+    <p class="meta"><cite>The Point Reyes Light</cite> &middot; Summer 2026</p>
+    <p class="links">
+      <a href="https://www.ptreyeslight.com/news/another-bad-year-for-seal-pups/">Published version</a>
+      <span class="sep">&middot;</span>
+      <a href="https://www.miles-barry.com/seal-pups.html">Interactive map (not published)</a>
+    </p>
+    <p class="role">I reported and wrote this piece, interviewing Sarah Codde, a National Park
+      Service marine ecologist, and Richard Vacha, a local tracker. It was edited by the paper&rsquo;s
+      editor in chief before publication. Separately, I built the interactive map in R from the park
+      service&rsquo;s harbor seal monitoring data, 1997&ndash;2025, and its 2026 monitoring update, to
+      understand the population dynamics underlying the story. The map did not run with the piece; it
+      is published here alongside it.</p>
+  </article>
+
+  <article class="clip">
+    <p class="num">02</p>
+    <h2>Creek swimming holes get poor marks for cleanliness</h2>
+    <p class="meta"><cite>The Point Reyes Light</cite> &middot; Summer 2026</p>
+    <p class="links">
+      <a href="https://www.ptreyeslight.com/news/creek-swimming-holes-get-poor-marks-for-cleanliness/">Published version</a>
+      <span class="sep">&middot;</span>
+      <a href="https://www.miles-barry.com/water-quality.html">Interactive chart (not published)</a>
+    </p>
+    <p class="role">I reported and wrote this piece. I also built the accompanying chart from State
+      Water Resources Control Board monitoring data (CEDEN and BeachWatch) and Marin County
+      monitoring records, plotting bacteria concentrations at each swimming hole across the
+      April&ndash;October 2025 sampling season on a logarithmic scale, with each site able to be added
+      or removed for comparison. As with the seal map, the chart did not run with the published story.</p>
+  </article>
+
+  <article class="clip">
+    <p class="num">03</p>
+    <h2>IRL Communications Report</h2>
+    <p class="meta">ASUCD Innovation and Research Lab</p>
+    <p class="links">
+      <a href="https://docs.google.com/document/d/1COTwrnxb6z8ynAelDp1_GKHZQVSApksKAM7CNa_tFuc/edit?tab=t.p228vepxig8z#heading=h.fp8ykvwjkwwq">Read the report</a>
+    </p>
+    <p class="role">I designed the survey instrument, analyzed the responses, and wrote the report.
+      Fieldwork was carried out by another branch of the student government. The analysis is
+      nonparametric throughout, chosen because several response groups were small enough that
+      distributional assumptions would not have held.</p>
+  </article>
+
+  <p class="foot">Miles Barry &middot;
+    <a href="mailto:mabarry@ucdavis.edu">mabarry@ucdavis.edu</a> &middot;
+    <a href="https://www.miles-barry.com/">miles-barry.com</a></p>
+
+</main>
+</body>
+</html>
