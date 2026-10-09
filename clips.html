@@ -59,6 +59,28 @@
     h2{font-size:20px}
     .links .sep{padding:0 5px}
   }
+
+  /* Cmd-P -> Save as PDF produces the role document uploaded with the application */
+  @media print{
+    @page{margin:0.9in 0.85in}
+    body{
+      padding:0;font-size:11pt;line-height:1.45;color:#000;
+      background:#fff;background-image:none;
+    }
+    main{max-width:none}
+    .home{display:none}
+    h1{font-size:19pt;margin-bottom:9px}
+    .byline{font-size:10pt;color:#000;margin-bottom:7px}
+    .standfirst{font-size:10.5pt;color:#333;margin-bottom:26px}
+    .clip{margin-bottom:24px;break-inside:avoid;page-break-inside:avoid}
+    h2{font-size:12.5pt;margin-bottom:5px}
+    .num,.meta{color:#444}
+    .num{font-size:8.5pt;margin-bottom:5px}
+    .meta{font-size:9.5pt;margin-bottom:6px}
+    .links{font-size:10pt;margin-bottom:8px}
+    a{text-decoration-color:rgba(0,0,0,.45)}
+    .foot{margin-top:30px;font-size:10pt;color:#333;break-inside:avoid}
+  }
 </style>
 </head>
 <body>
@@ -68,8 +90,9 @@
 
   <h1>Selected data-driven work</h1>
   <p class="byline">Miles Barry</p>
-  <p class="standfirst">Three clips, with a note on my role in each. Where I built a graphic that
-    did not run with the published story, both are linked and labeled.</p>
+  <p class="standfirst">My role in each of three work samples. Samples 01 and 02 each include an
+    interactive graphic I built that did not run with the published story; both are linked below,
+    and both are live at miles-barry.com/clips.html.</p>
 
   <article class="clip">
     <p class="num">01</p>
@@ -78,7 +101,7 @@
     <p class="links">
       <a href="https://www.ptreyeslight.com/news/another-bad-year-for-seal-pups/">Published version</a>
       <span class="sep">&middot;</span>
-      <a href="https://www.miles-barry.com/seal-pups.html">Interactive map (not published)</a>
+      <a href="https://www.miles-barry.com/seal-pups.html">Interactive map</a>
     </p>
     <p class="role">I reported and wrote this piece, interviewing Sarah Codde, a National Park
       Service marine ecologist, and Richard Vacha, a local tracker. It was edited by the paper&rsquo;s
@@ -95,7 +118,7 @@
     <p class="links">
       <a href="https://www.ptreyeslight.com/news/creek-swimming-holes-get-poor-marks-for-cleanliness/">Published version</a>
       <span class="sep">&middot;</span>
-      <a href="https://www.miles-barry.com/water-quality.html">Interactive chart (not published)</a>
+      <a href="https://www.miles-barry.com/water-quality.html">Interactive chart</a>
     </p>
     <p class="role">I reported and wrote this piece. I also built the accompanying chart from State
       Water Resources Control Board monitoring data (CEDEN and BeachWatch) and Marin County
