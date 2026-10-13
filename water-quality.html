@@ -61,7 +61,7 @@
   .axis, text.axis{fill:var(--muted);font-size:13px;font-family:inherit}
   .grid line{stroke:var(--grid);stroke-width:1}
   .series-line{fill:none;stroke-width:2.4;stroke-linejoin:round;stroke-linecap:round}
-  .thresh{stroke-width:1;opacity:.5;stroke-dasharray:2 4}
+  .thresh{stroke-width:2;opacity:.6;stroke-dasharray:3 5}
   .end-label{font-size:12px;font-weight:700}
   .scrub{stroke:rgba(0,0,0,.35);stroke-width:1}
   .dot{stroke:var(--paper);stroke-width:1.5}
@@ -340,7 +340,7 @@ function renderKey(){
   MEASURES.forEach(m => {
     html += '<span class="tk-item">'
           + `<svg width="30" height="8" aria-hidden="true"><line x1="0" y1="4" x2="30" y2="4" `
-          + `stroke="${m.color}" stroke-width="1.6" stroke-dasharray="2 4"/></svg>`
+          + `stroke="${m.color}" stroke-width="2" stroke-dasharray="3 5"/></svg>`
           + `<span>${m.name} &mdash; <b>${fmt(m.thr)}</b></span></span>`;
   });
   document.getElementById('threshKey').innerHTML = html + '</div>';
