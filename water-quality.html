@@ -65,7 +65,7 @@
   .end-label{font-size:12px;font-weight:700}
   .scrub{stroke:rgba(0,0,0,.35);stroke-width:1}
   .dot{stroke:var(--paper);stroke-width:1.5}
-  .over{stroke:var(--paper);stroke-width:1.4}
+  .over{stroke:var(--paper);stroke-width:1.8}
   .readout{font-size:12.5px;color:var(--muted);margin:10px 2px 0;min-height:1.3em;
            font-variant-numeric:tabular-nums}
   .readout b{color:var(--ink);font-weight:700}
@@ -275,18 +275,6 @@ function draw(){
     if (m.thr <= YMAX) s += `<line class="thresh" x1="${M.l}" x2="${M.l+iw}" y1="${yy}" y2="${yy}" stroke="${m.color}"></line>`;
   });
 
-  // A red dot on every reading at or above its standard. The y value is read
-  // from the line being drawn, so the dots travel with it when sites change.
-  MEASURES.forEach(m => {
-    const ys = drawn[m.key]; if (!ys) return;
-    DATA[current].forEach(r => {
-      if (r[m.key] < m.thr) return;
-      const i = allDates.indexOf(r.date);
-      const cy = i >= 0 ? ys[i] : y(r[m.key]);
-      s += `<circle class="over" cx="${x(r.date)}" cy="${cy}" r="4.2" fill="${OVER}"></circle>`;
-    });
-  });
-
   const labels = [];
   MEASURES.forEach(m => {
     const ys = drawn[m.key]; if (!ys) return;
@@ -295,6 +283,19 @@ function draw(){
     s += `<path class="series-line" d="${d}" stroke="${m.color}"></path>`;
     labels.push({y: ys[ys.length-1], name: m.name, color: m.color});
   });
+  // A red dot on every reading at or above its standard. Drawn after the
+  // paths so the lines cannot cover them, and read off the line as drawn so
+  // they travel with it when the site changes.
+  MEASURES.forEach(m => {
+    const ys = drawn[m.key]; if (!ys) return;
+    DATA[current].forEach(r => {
+      if (r[m.key] < m.thr) return;
+      const i = allDates.indexOf(r.date);
+      const cy = i >= 0 ? ys[i] : y(r[m.key]);
+      s += `<circle class="over" cx="${x(r.date)}" cy="${cy}" r="6" fill="${OVER}"></circle>`;
+    });
+  });
+
   labels.sort((a,b) => a.y - b.y);
   for (let i = 1; i < labels.length; i++)
     if (labels[i].y - labels[i-1].y < 18) labels[i].y = labels[i-1].y + 18;
@@ -364,8 +365,8 @@ function renderKey(){
   });
   html += '</div>';
   html += '<div class="tk-row"><div class="tk-items"><span class="tk-item">'
-        + `<svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="4.2" `
-        + `fill="${OVER}" stroke="#FAF7F2" stroke-width="1.4"/></svg>`
+        + `<svg width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="6" `
+        + `fill="${OVER}" stroke="#FAF7F2" stroke-width="1.8"/></svg>`
         + '<span>Sample at or above the standard</span></span></div></div>';
   document.getElementById('threshKey').innerHTML = html;
 }
